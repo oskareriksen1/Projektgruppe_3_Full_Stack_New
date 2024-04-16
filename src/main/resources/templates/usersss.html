@@ -8,11 +8,11 @@
 
 <h1> DET ER KJIN NHJEMMESIDE</h1>
 
-<tr th:each="User: ${users}">
-    <td th:text="${user.}"></td> <!-- Accessing artistName property directly -->
-    <td th:text="${mus.genre}"></td> <!-- Accessing genre property directly -->
-    <td th:text="${mus.albumName}"></td> <!-- Accessing albumName property directly -->
-    <td th:text="${mus.albumYear}"></td> <!-- Accessing albumYear property directly -->
+<tr th:each="user: ${users}">
+    <td th:text="${user.getUsername()}"></td> <!-- Accessing artistName property directly -->
+    <td th:text="${user.getEmail()}"></td> <!-- Accessing genre property directly -->
+    <td th:text="${user.getPassword()}"></td> <!-- Accessing albumName property directly -->
+
 
 
 
