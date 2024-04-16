@@ -36,7 +36,7 @@ public String hej() {
 
     @GetMapping("/brugere")
     public String seBrugere(Model model) {
-        List<User> userList = userRepository.getAll();
+        List<User> userList = userRepository.getAllUsers();
         model.addAttribute("users", userList);
         return "usersss";
     }
