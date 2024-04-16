@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opret Bruger - iWish</title>
+    <link rel="stylesheet" th:href="@{/CSS/styles.css}" href="../static/CSS/styles.css">
+</head>
+<body class="opretBruger">
+<div th:replace="~{Header :: Header}"></div>
+<header>
+    <h1>Opret Bruger</h1>
+</header>
+<main>
+    <form action="/opretbruger" method="POST">
+        <label for="username">Brugernavn:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Adgangskode:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Bekræft Adgangskode:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <button type="submit">Opret Bruger</button>
+    </form>
+</main>
+<div th:replace="~{Footer :: Footer}"></div>
+</body>
+</html>

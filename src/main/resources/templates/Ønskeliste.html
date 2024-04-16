@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/89cdbd608a.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Din ønskeliste</title>
+  <link rel="stylesheet" th:href="@{/CSS/styles.css}" href="../static/CSS/styles.css">
+</head>
+<body>
+<div th:replace="~{Header :: Header}"></div>
+<div class="Ønskeside">
+  <div class="card">
+    <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+    <h1>Tailored Jeans</h1>
+    <p class="price">$19.99</p>
+    <p>Some text about the jeans.</p>
+    <p><button onclick="changeButton()">Reserver</button><button>Besøg siden</button></p>
+
+  </div>
+  <div class="card">
+    <div class="nytønske">
+      <nav>
+
+        <div class="plus"><a href="http://localhost:8080/opretoenske">
+          <img src="../static/Images/plus_tegn.jpg" th:src="@{images/plus_tegn.jpg}" alt="Tilføj ønske">
+        </a>
+        </div>
+
+        <p>Tilføj nyt ønske</p>
+      </nav>
+    </div>
+  </div>
+</div>
+<div th:replace="~{Footer :: Footer}"></div>
+<script>
+  function changeButton() {
+
+    const reserveButton = document.querySelector(".card button");
+
+
+    reserveButton.style.backgroundColor = "grey";
+    reserveButton.textContent = "Reserveret";
+  }
+</script>
+</body>
+</html>
