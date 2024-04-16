@@ -1,0 +1,328 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 2%;
+    font-size: 1.6em;
+    background-color: #5FD18A;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #5FD18A;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Responsiveness: Handles form sizing on smaller screens */
+@media (max-width: 768px) {
+    .center-container {
+        width: 90%;
+    }
+}
+
+.Headerbody {
+    padding: 0;
+    margin:0;
+
+}
+
+.Header .logo img {
+    width: 100px;
+    height: 75px;
+}
+
+.Header * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Header body {
+    display: flex;
+    justify-content: center;
+    background-color: #5FD18A;
+    margin: 0;
+    padding:0;
+}
+.Header nav ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 20px;
+}
+.Header nav {
+    display: inline-block;
+    padding: 10px;
+}
+
+.Header nav li {
+    margin-right: 20px;
+
+}
+
+.Header nav li:first-child {
+    margin-right: 0;
+
+}
+
+.Header .nav-button {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+.Header .nav-button a {
+    padding: 10px 15px;
+    background-color: #5FD18A;
+    text-decoration: none;
+    color: white;
+}
+.Header a:hover {
+    color: black;
+    background-color: transparent;
+}
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.center-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    height: 50vh;
+}
+
+.box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0;
+}
+
+.opretBruger {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #FFFFFF;
+        color: #2B2B2B;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    form {
+        background-color: #F2F2F2;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    label {
+        color: #2B2B2B;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #CBCBCB;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+        background-color: #5FD18A;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #4CAE7C;
+    }
+
+    footer {
+
+    }
+
+
+}
+
+footer {
+    background-color:#5FD18A ;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+.Footer {
+    position: absolute;
+    bottom:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#5FD18A ;
+    padding: 2%;
+    width: 96%;
+
+
+}
+
+.Footer .logo img {
+    width: 120px;
+    height: 75px;
+}
+
+.Footer .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+
+}
+.Footer .footer-left img {
+    max-width: 100px;
+}
+
+.Footer .footer-left p {
+    margin: 0;
+}
+
+.Footer .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.Footer .footer-center {
+    color: white;
+}
+
+.Footer .footer-right ul li {
+    margin-right: 10px;
+    padding-right: 30px;
+}
+
+.Footer .footer-right ul li a {
+    color: white;
+    text-decoration: none;
+}
+.Footer .footer-right a:hover {
+    color: black;
+    background-color: transparent;
+}
+.Footer * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Forside .container .p1 {
+    text-align: left;
+}
+
+.Forside .container .p2 {
+    text-align: right;
+}
+
+.Forside .container .p3 {
+    text-align: left;
+}
+
+.Forside .container .p4 {
+    text-align: center;
+}
+.Ønskeside .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width:225px;
+    margin:1%;
+
+    text-align: center;
+
+}
+.Ønskeside .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.Ønskeside .price {
+    color: grey;
+    font-size: 22px;
+}
+.Ønskeside{
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+.Ønskeside .nytønske .plus img {
+    width: 125px;
+    height: 125px;
+}
+.Ønskeside .nytønske {
+    padding-top: 30px;
+}
+.Ønskeside .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 14px;
+    align-content: space-between;
+
+}
+.Ønskeside .card .button-container {
+    display: flex;
+}
+
+.Ønskeside .card button:hover {
+    opacity: 0.7;
+}
+

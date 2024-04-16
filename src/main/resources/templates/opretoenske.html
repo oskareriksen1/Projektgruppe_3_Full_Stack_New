@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" href="../static/css/styles.css">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="~{Header :: Header}"></div>
+<div class="center-container">
+    <div class="box">
+        <form action="/submit-your-form-handler" method="post">
+            <label for="produktnavn">Produktnavn:</label>
+            <input type="text" id="produktnavn" name="produktnavn" placeholder="Navnet på ønsket...">
+
+            <label for="link">Link til produktsiden</label>
+            <input type="text" id="link" name="productLink" placeholder="Indsæt link...">
+
+            <label for="pris">Pris</label>
+            <input type="number" id="pris" name="pris" placeholder="Indsæt pris">
+
+            <label for="imageUpload">Upload an image:</label>
+            <input type="file" id="imageUpload" name="imageFile" accept="image/*">
+
+            <input type="submit" value="Opret ønske">
+        </form>
+    </div>
+</div>
+<div th:replace="~{Footer :: Footer}"></div>
+</body>
+</html>
