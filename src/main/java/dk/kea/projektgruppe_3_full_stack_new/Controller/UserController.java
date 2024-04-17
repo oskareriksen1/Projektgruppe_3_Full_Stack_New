@@ -1,6 +1,7 @@
 package dk.kea.projektgruppe_3_full_stack_new.Controller;
 
 import dk.kea.projektgruppe_3_full_stack_new.Model.User;
+import dk.kea.projektgruppe_3_full_stack_new.Repository.DatabaseManager;
 import dk.kea.projektgruppe_3_full_stack_new.Repository.UserRepository;
 import dk.kea.projektgruppe_3_full_stack_new.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping("/opretbruger")
-    public String createUser (@ModelAttribute User user) {
+    public String createUser(@ModelAttribute User user) {
         userService.createUser(user);
         return "redirect:/login";
     }
@@ -34,11 +35,14 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login (@ModelAttribute User user) {
-        if (userService.isValidUser(user.getUsername(), user.getPassword())) {
-            return "redirect:/ønskelisten";
-        } else {
-            return "redirect:/login?error";
-        }
+    public String login(@RequestParam String username, @RequestParam String password) {
+        int wishListID = DatabaseManager.authenticateUser(username, password);
+        if (wishListID != -1) {
+        return "redirect:/ønskelisten?wishListID=" + wishListID;
+    } else {
+        return "redirect:/loginside";
     }
 }
+
+}
+
