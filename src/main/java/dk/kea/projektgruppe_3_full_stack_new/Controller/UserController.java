@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
+
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
+
     @GetMapping("/opretbruger")
     public String showCreateUserForm() {
         return "OpretBruger";
