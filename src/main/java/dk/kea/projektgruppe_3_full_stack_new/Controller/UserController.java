@@ -32,9 +32,9 @@ public class UserController {
     @PostMapping("/login")
     public String login (@ModelAttribute User user) {
         if (userRepository.isValidUser(user.getUsername(), user.getPassword())) {
-            return "redirect:/"; // Omdirigér til startsiden efter login
+            return "redirect:/";
         } else {
-            return "redirect:/login?error"; // Omdirigér tilbage til login-siden med en fejlmeddelelse
+            return "redirect:/login?error";
         }
     }
 }

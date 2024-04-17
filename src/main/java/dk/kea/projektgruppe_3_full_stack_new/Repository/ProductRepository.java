@@ -34,7 +34,6 @@ public class ProductRepository {
     }
 
     public int save(Product product) {
-        // Check if the product ID is null to determine if this is a create or update operation
         if (product.getId() == null) {
             return jdbcTemplate.update(
                     "INSERT INTO products (product_name, product_link, price, image) VALUES (?, ?, ?, ?)",
