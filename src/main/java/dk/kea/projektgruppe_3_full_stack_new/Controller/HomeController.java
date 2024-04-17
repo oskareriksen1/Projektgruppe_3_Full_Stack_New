@@ -2,6 +2,7 @@ package dk.kea.projektgruppe_3_full_stack_new.Controller;
 
 import dk.kea.projektgruppe_3_full_stack_new.Model.Product;
 import dk.kea.projektgruppe_3_full_stack_new.Model.User;
+import dk.kea.projektgruppe_3_full_stack_new.Repository.ProductRepository;
 import dk.kea.projektgruppe_3_full_stack_new.Repository.UserRepository;
 import dk.kea.projektgruppe_3_full_stack_new.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;

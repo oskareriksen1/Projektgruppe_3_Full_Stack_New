@@ -1,7 +1,9 @@
 package dk.kea.projektgruppe_3_full_stack_new.Repository;
 
 import dk.kea.projektgruppe_3_full_stack_new.Model.Product;
+import dk.kea.projektgruppe_3_full_stack_new.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -27,7 +29,9 @@ public class ProductRepository {
     }
 
     public List<Product> findAll() {
-        return jdbcTemplate.query("SELECT * FROM products", new ProductRowMapper());
+        String sql = "SELECT * FROM products";
+        RowMapper<Product> rowMapper = new BeanPropertyRowMapper<>(Product.class);
+        return jdbcTemplate.query(sql, rowMapper);
     }
 
     public Optional<Product> findById(Long id) {
