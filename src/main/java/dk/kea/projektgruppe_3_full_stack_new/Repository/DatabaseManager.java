@@ -11,7 +11,7 @@ import java.sql.SQLException;
 @Repository
 public class DatabaseManager {
 
-    private static DataSource dataSource;
+     static DataSource dataSource;
 
     @Autowired
     public void setDataSource(DataSource dataSource) {

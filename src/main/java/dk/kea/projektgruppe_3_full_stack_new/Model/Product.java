@@ -22,7 +22,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String productName, String productLink, BigDecimal price, byte[] image) {
+    public Product(int id, String productName, String productLink, BigDecimal price, byte[] image) {
         this.id = id;
         this.productName = productName;
         this.productLink = productLink;
@@ -30,7 +30,7 @@ public class Product {
         this.image = image;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -74,12 +74,12 @@ public class Product {
         return price;
     }
 
-    /*public byte[] getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public byte[] setImage(byte[] image) {
         this.image = image;
         return image;
-    } */
+    }
 }

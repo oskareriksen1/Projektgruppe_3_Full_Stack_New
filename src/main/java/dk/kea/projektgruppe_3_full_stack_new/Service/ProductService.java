@@ -46,7 +46,7 @@ public class ProductService {
         productRepository.save(product);
     }
 
-    public void updateProduct(Long id, Product product, MultipartFile imageFile) {
+    public void updateProduct(int id, Product product, MultipartFile imageFile) {
         if (imageFile != null && !imageFile.isEmpty()) {
             try {
                 byte[] imageBytes = imageFile.getBytes();

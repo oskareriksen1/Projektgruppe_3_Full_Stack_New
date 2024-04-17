@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import static dk.kea.projektgruppe_3_full_stack_new.Repository.DatabaseManager.dataSource;
@@ -44,7 +45,7 @@ public class ProductRepository {
     }
 
     public int save(Product product) {
-        if (product.getId() == null) {
+        if (Objects.equals(product.getId(), null )) {
             return jdbcTemplate.update(
                     "INSERT INTO products (product_name, product_link, price, image) VALUES (?, ?, ?, ?)",
                     product.getProductName(), product.getProductLink(), product.getPrice(), product.getImage()
