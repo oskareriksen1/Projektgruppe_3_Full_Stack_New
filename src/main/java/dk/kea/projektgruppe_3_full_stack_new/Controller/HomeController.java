@@ -13,10 +13,6 @@ import java.util.List;
 public class HomeController {
     @Autowired UserRepository userRepository;
 
-@GetMapping("/")
-public String hej() {
-    return "usersss";
-}
 
     @GetMapping("/loginside")
     public String loginside () {
@@ -34,7 +30,7 @@ public String hej() {
         return "Ønskeliste";
     }
 
-    @GetMapping("/brugere")
+    @GetMapping("/")
     public String seBrugere(Model model) {
         List<User> userList = userRepository.getAllUsers();
         model.addAttribute("users", userList);
