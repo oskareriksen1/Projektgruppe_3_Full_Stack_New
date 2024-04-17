@@ -1,6 +1,8 @@
 package dk.kea.projektgruppe_3_full_stack_new.Controller;
 
+import dk.kea.projektgruppe_3_full_stack_new.Model.Product;
 import dk.kea.projektgruppe_3_full_stack_new.Model.User;
+import dk.kea.projektgruppe_3_full_stack_new.Repository.ProductRepository;
 import dk.kea.projektgruppe_3_full_stack_new.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -12,6 +14,8 @@ import java.util.List;
 @Controller
 public class HomeController {
     @Autowired UserRepository userRepository;
+    @Autowired
+    private ProductRepository productRepository;
 
 
     @GetMapping("/loginside")
@@ -26,7 +30,9 @@ public class HomeController {
 
 
     @GetMapping ("/ønskelisten")
-    public String Ønskelisten () {
+    public String Ønskelisten (Model model) {
+        List<Product> productList= productRepository.findAll();
+        model.addAttribute("products",productList);
         return "Ønskeliste";
     }
 
@@ -36,4 +42,5 @@ public class HomeController {
         model.addAttribute("users", userList);
         return "usersss";
     }
+
 }

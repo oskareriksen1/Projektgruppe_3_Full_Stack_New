@@ -9,7 +9,22 @@ public class Product {
     private BigDecimal price;
     private byte[] image;
 
+    public Product(String productName, byte[] image, String productLink, BigDecimal price) {
+        this.productName = productName;
+        this.image = image;
+        this.productLink = productLink;
+        this.price = price;
+    }
+
     public Product() {
+    }
+
+    public Product(Long id, String productName, String productLink, BigDecimal price, byte[] image) {
+        this.id = id;
+        this.productName = productName;
+        this.productLink = productLink;
+        this.price = price;
+        this.image = image;
     }
 
     public Long getId() {
