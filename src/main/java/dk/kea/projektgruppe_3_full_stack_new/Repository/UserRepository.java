@@ -1,5 +1,6 @@
 package dk.kea.projektgruppe_3_full_stack_new.Repository;
 
+
 import dk.kea.projektgruppe_3_full_stack_new.Model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,12 @@ import java.util.List;
 @Repository
 public class UserRepository {
 
+    private final JdbcTemplate jdbcTemplate;
+
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    public UserRepository (JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     public List<User> getAllUsers() {
         String sql = "SELECT * FROM users";
@@ -40,4 +45,4 @@ public class UserRepository {
         return count == 1;
     }
 
- }
+}

@@ -2,18 +2,19 @@ package dk.kea.projektgruppe_3_full_stack_new.Controller;
 
 import dk.kea.projektgruppe_3_full_stack_new.Model.User;
 import dk.kea.projektgruppe_3_full_stack_new.Repository.UserRepository;
+import dk.kea.projektgruppe_3_full_stack_new.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
 
+    private final UserService userService;
     @Autowired
-    private UserRepository userRepository;
-
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
     @GetMapping("/opretbruger")
     public String showCreateUserForm() {
         return "OpretBruger";
@@ -21,6 +22,7 @@ public class UserController {
 
     @PostMapping("/opretbruger")
     public String createUser (@ModelAttribute User user) {
+        userService.createUser(user);
         return "redirect:/login";
     }
 
@@ -31,8 +33,8 @@ public class UserController {
 
     @PostMapping("/login")
     public String login (@ModelAttribute User user) {
-        if (userRepository.isValidUser(user.getUsername(), user.getPassword())) {
-            return "redirect:/";
+        if (userService.isValidUser(user.getUsername(), user.getPassword())) {
+            return "redirect:/ønskelisten";
         } else {
             return "redirect:/login?error";
         }
