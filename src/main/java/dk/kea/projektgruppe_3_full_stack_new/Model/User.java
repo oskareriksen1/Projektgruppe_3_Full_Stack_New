@@ -8,7 +8,7 @@ public class User {
     private String password;
 
     public User() {
-    }//hej
+    }//hej1
 
     public User(String username, String email, String password) {
         this.username = username;
