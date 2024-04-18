@@ -25,7 +25,7 @@
   <tr th:each="product: ${products}">
     <td th:text="${product.getProductName()}"></td>
     <td><nav><ul>
-      <li class="nav-button"><a  href="${product.getProductLink()}">Klik her for at se produktet</a></li>
+      <li class="nav-button"><a th:href="${product.getProductLink()}">Klik her for at se produktet</a></li>
     </ul></nav></td>
     <td th:text="${product.getPrice()}"></td>
   </tr>
@@ -39,11 +39,10 @@
   <nav>
 
     <div><a href="http://localhost:8080/opretoenske">
-      <button>Opret ønske</button>
+      <button>Opret nyt ønske</button>
     </a>
     </div>
 
-    <p>Tilføj nyt ønske</p>
   </nav>
 </div>
 <div th:replace="~{Footer :: Footer}"></div>
