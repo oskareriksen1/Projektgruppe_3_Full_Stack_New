@@ -31,6 +31,10 @@ public class HomeController {
         return "opretoenske";
     }
 
+    @GetMapping("/")
+    public String forside() {
+        return "Forside";
+    }
 
     @GetMapping ("/oenskelisten")
     public String Ønskelisten (@RequestParam ("wishListID") int wishListID, Model model) {

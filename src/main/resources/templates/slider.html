@@ -1,50 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8">
-  <title>Din ønskeliste</title>
   <link rel="stylesheet" th:href="@{/CSS/styles.css}" href="../static/CSS/styles.css">
+  <meta charset="UTF-8">
+  <title>Logo Slider</title>
+
 </head>
-<body>
-<div th:replace="~{Header :: Header}"></div>
-<div class="Ønskeside">
-  <table>
-  <thead>
-<tr>
-  <th>Ønske</th>
-  <th>Link</th>
-  <th>Pris</th>
-
-</tr>
-</thead>
-
-
-
-  <tbody>
-  <tr th:each="product: ${products}">
-    <td th:text="${product.getProductName()}"></td>
-    <td><nav><ul>
-      <li class="nav-button"><a th:href="${product.getProductLink()}">Klik her for at se produktet</a></li>
-    </ul></nav></td>
-    <td th:text="${product.getPrice()}"></td>
-  </tr>
-  </tbody>
-  </table>
-
-
-
-</div>
-<div class="nytønske">
-  <nav>
-
-    <div><a href="http://localhost:8080/opretoenske">
-      <button>Opret nyt ønske</button>
-    </a>
-    </div>
-
-  </nav>
-</div>
 <slidebody>
   <div class="slider">
     <div class="slide-track">
@@ -103,17 +64,4 @@
 
 
 </slidebody>
-<div th:replace="~{Footer :: Footer}"></div>
-<script>
-  function changeButton() {
-
-    const reserveButton = document.querySelector(".card button");
-
-
-    reserveButton.style.backgroundColor = "grey";
-    reserveButton.textContent = "Reserveret";
-
-  }
-</script>
-</body>
 </html>
