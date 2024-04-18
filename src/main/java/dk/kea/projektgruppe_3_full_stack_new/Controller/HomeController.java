@@ -44,7 +44,7 @@ public class HomeController {
         return "Ønskeliste";
     }
 
-    @GetMapping("/")
+    @GetMapping("/brugere")
     public String seBrugere(Model model) {
         List<User> userList = userRepository.getAllUsers();
         model.addAttribute("users", userList);
