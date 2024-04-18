@@ -43,7 +43,6 @@ label {
     margin-bottom: 5px;
 }
 
-/* Responsiveness: Handles form sizing on smaller screens */
 @media (max-width: 768px) {
     .center-container {
         width: 90%;
