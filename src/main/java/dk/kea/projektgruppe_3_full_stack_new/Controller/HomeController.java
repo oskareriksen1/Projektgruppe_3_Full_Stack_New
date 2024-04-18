@@ -14,8 +14,8 @@ public class HomeController {
     @Autowired UserRepository userRepository;
 
 @GetMapping("/")
-public String hej() {
-    return "usersss";
+public String forside() {
+    return "Forside";
 }
 
     @GetMapping("/loginside")
