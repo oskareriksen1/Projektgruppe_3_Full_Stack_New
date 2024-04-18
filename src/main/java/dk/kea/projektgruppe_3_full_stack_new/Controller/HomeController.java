@@ -41,9 +41,7 @@ public class HomeController {
     @GetMapping ("/oenskelisten")
     public String Ønskelisten(@RequestParam(name = "wishListID", required = false) Integer wishListID, Model model) {
         if (wishListID == null) {
-            // Håndtering af tilfælde, hvor wishListID ikke er til stede i anmodningen
-            // Her kan du vælge at vise en fejlmeddelelse, omdirigere brugeren eller håndtere det på en anden måde
-            return "redirect:/default-page"; // Tilføj en fejlside og returner dens navn
+            return "redirect:/default-page";
         }
         List<Product> products = productRepository.loadWishList(wishListID);
         model.addAttribute("wishListID", wishListID);

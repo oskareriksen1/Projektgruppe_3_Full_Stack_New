@@ -43,7 +43,7 @@ label {
     margin-bottom: 5px;
 }
 
-/* Responsiveness: Handles form sizing on smaller screens */
+
 @media (max-width: 768px) {
     .center-container {
         width: 90%;
@@ -211,19 +211,18 @@ footer {
     bottom: 0;
 }
 .Footer {
-    position: absolute;
+    position: relative;
     bottom:0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color:#5FD18A ;
-    padding: 2%;
-    width: 96%;
-
+    padding: 55px 0;
 
 }
 
 .Footer .logo img {
+
     width: 120px;
     height: 75px;
 }
@@ -233,6 +232,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     color: white;
+    padding-left: 30px;
 
 }
 .Footer .footer-left img {
