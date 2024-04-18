@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -26,14 +27,20 @@ public class HomeController {
         return "loginside";
     }
 
-    @GetMapping("/opretoenske")
-    public String opretoenske() {
+    @GetMapping("/opretoenske/{wishlistid}")
+    public String opretoenske(@PathVariable("wishlistid") int wishlistid, Model model)  {
+        model.addAttribute("wishlistid", wishlistid);
         return "opretoenske";
     }
 
 
     @GetMapping ("/oenskelisten")
-    public String Ønskelisten (@RequestParam ("wishListID") int wishListID, Model model) {
+    public String Ønskelisten(@RequestParam(name = "wishListID", required = false) Integer wishListID, Model model) {
+        if (wishListID == null) {
+            // Håndtering af tilfælde, hvor wishListID ikke er til stede i anmodningen
+            // Her kan du vælge at vise en fejlmeddelelse, omdirigere brugeren eller håndtere det på en anden måde
+            return "redirect:/default-page"; // Tilføj en fejlside og returner dens navn
+        }
         List<Product> products = productRepository.loadWishList(wishListID);
         model.addAttribute("wishListID", wishListID);
         model.addAttribute("products", products);

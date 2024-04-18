@@ -33,8 +33,8 @@ public class ProductRepository {
 
     public int save(Product product) {
         if (product.getId() == 0) {
-            String sql = "INSERT INTO products (product_name, product_link, price) VALUES (?, ?, ?)";
-            return jdbcTemplate.update(sql, product.getProductName(), product.getProductLink(), product.getPrice());
+            String sql = "INSERT INTO products (product_name, product_link, price, wishlist_id) VALUES (?, ?, ?, ?)";
+            return jdbcTemplate.update(sql, product.getProductName(), product.getProductLink(), product.getPrice(), product.getWishlist_id());
         } else {
             String sql = "UPDATE products SET product_name = ?, product_link = ?, price = ? WHERE id = ?";
             return jdbcTemplate.update(sql, product.getProductName(), product.getProductLink(), product.getPrice(), product.getId());

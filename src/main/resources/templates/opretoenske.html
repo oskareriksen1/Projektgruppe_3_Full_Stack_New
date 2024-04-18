@@ -19,6 +19,8 @@
             <label for="pris">Pris:</label>
             <input type="text" id="pris" name="pris" placeholder="Indsæt pris" required pattern="^\d+(\.\d{1,2})?$" title="Pris skal være et tal, der kan have to decimaler">
 
+            <input type="text" name="wishlistid" th:value="${wishlistid}" hidden>
+
             <button type="submit">Opret ønske</button>
         </form>
     </div>
