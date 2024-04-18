@@ -8,32 +8,29 @@
 </head>
 <body>
 <div th:replace="~{Header :: Header}"></div>
+<header class="headerønske">
+  Velkommen til din iWish
+</header>
 <div class="Ønskeside">
   <table>
   <thead>
 <tr>
   <th>Ønske</th>
-  <th>Link</th>
   <th>Pris</th>
-
+  <th>Link</th>
 </tr>
 </thead>
-
-
-
   <tbody>
   <tr th:each="product: ${products}">
     <td th:text="${product.getProductName()}"></td>
+    <td th:text="${product.getPrice()}+' DKK'"></td>
     <td><nav><ul>
-      <li class="nav-button"><a th:href="${product.getProductLink()}">Klik her for at se produktet</a></li>
+      <li class="nav-button"><a th:href="${product.getProductLink()}">Klik her</a></li>
     </ul></nav></td>
-    <td th:text="${product.getPrice()}"></td>
+
   </tr>
   </tbody>
   </table>
-
-
-
 </div>
 <div class="nytønske">
   <nav>
@@ -42,7 +39,6 @@
       <button>Opret nyt ønske</button>
     </a>
     </div>
-
   </nav>
 </div>
 <slidebody>
@@ -104,16 +100,6 @@
 
 </slidebody>
 <div th:replace="~{Footer :: Footer}"></div>
-<script>
-  function changeButton() {
 
-    const reserveButton = document.querySelector(".card button");
-
-
-    reserveButton.style.backgroundColor = "grey";
-    reserveButton.textContent = "Reserveret";
-
-  }
-</script>
 </body>
 </html>

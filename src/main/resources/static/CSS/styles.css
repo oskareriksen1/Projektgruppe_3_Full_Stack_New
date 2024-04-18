@@ -303,6 +303,10 @@ footer {
     display: flex;
 
 }
+.headerønske{
+    font-size: 1.8em;
+    padding-left: 20px;
+}
 .Ønskeside thead {
     font-size: 1.6em;
     justify-content: space-evenly;
@@ -311,20 +315,35 @@ footer {
     list-style: none;
     padding-right: 30px;
 }
-.Ønskeside .nytønske {
-    padding-top: 30px;
+.nytønske{
+    padding-top: 10px;
+    justify-content: space-evenly;
+    padding-left: 30px;
+
+}
+.nytønske button {
+
+    height: auto;
+    width: auto;
+
 }
 .Ønskeside table {
     border-collapse: collapse;
-
-
+    width: 100%;
 
 }
+.Ønskeside th{
+    background-color:  #5FD18A;
+}
 .Ønskeside th, td{
-    border: 1px solid #000000;
-    padding: 5px;
+
+    padding:5px;
     align-content: center;
     text-align: center;
+
+}
+.Ønskeside td{
+    border: 1px solid #000000;
 }
 
 .slidebody {
