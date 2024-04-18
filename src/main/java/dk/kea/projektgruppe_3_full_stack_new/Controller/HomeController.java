@@ -33,6 +33,10 @@ public class HomeController {
         return "opretoenske";
     }
 
+    @GetMapping("/")
+    public String forside() {
+        return "Forside";
+    }
 
     @GetMapping ("/oenskelisten")
     public String Ønskelisten(@RequestParam(name = "wishListID", required = false) Integer wishListID, Model model) {
@@ -47,7 +51,7 @@ public class HomeController {
         return "Ønskeliste";
     }
 
-    @GetMapping("/")
+    @GetMapping("/brugere")
     public String seBrugere(Model model) {
         List<User> userList = userRepository.getAllUsers();
         model.addAttribute("users", userList);

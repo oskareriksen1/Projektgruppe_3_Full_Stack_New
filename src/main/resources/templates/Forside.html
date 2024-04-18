@@ -9,43 +9,59 @@
 
 <body class="Forside">
 <main>
-  <h2>iWish</h2>
 
+  <div th:replace="~{Header :: Header}"></div>
   <div class="container">
+
+
     <div class="tekst">
-      <section1>
-        <h1>En ny fortlkning på ønskelisten</h1>
-        <P class="p1">
+      <h1>iWish</h1>
+      <section class="section1">
+        <h1>En ny fortolkning på ønskelisten</h1>
+        <p class="p1">
           iWish, en nyere og mere moderne måde at dele ønsker på.
           Gør det nemmere med iWish at skabe din egen ønskeliste.
           Oplev selv hvor nemt det er ved at oprette din egen.
-        </P>
-      </section1>
-      <section2>
+        </p>
+
+      </section>
+      <section class="section2">
         <h1>Gem ønsker fra alle dine ynglings brands</h1>
         <p class="p2">
           iWish har samlet alle de store brands under et tag.
           Vi har givet dig mulighed for at kigge efter ønsker på
           alle dine platforme, og samtidig er det nemt at bruge.
         </p>
-      </section2>
-      <section3>
+
+      </section>
+      <section class="section3">
         <h1>Del med venner og familie</h1>
         <p class="p3">
           iWish har gjort det super nemt at dele din liste med
           venner eller familien. Det er så nemt at selv farmor
           kan finde ud af det.
         </p>
-      </section3>
-      <section4>
-        <h1>Undgå dobbeltgavet</h1>
+
+      </section>
+      <section class="section4">
+        <h1>Undgå dobbeltgaver</h1>
         <p class="p4">
           Med iWish er det muligt at reservere en gave, derved
           kan du undgå at modtage flere at den samme gave.
         </p>
+      </section>
 
+    </div>
+    <div class="images">
+      <img src="../static/Images/gavegift_cropped.png" th:src="@{Images/gavegift_cropped.png}" height="auto" width="175" alt="Forside billede">
+      <img src="../static/Images/mails.png" th:src="@{Images/mails.png}" height="auto" width="175" alt="Forside billede">
+      <img src="../static/Images/facebook.png" th:src="@{Images/facebook.png}" height="auto" width="175" alt="Forside billede">
+      <img src="../static/Images/messenger.png" th:src="@{Images/messenger.png}" height="auto" width="175" alt="Forside billede">
+      <img src="../static/Images/beskeder.png" th:src="@{Images/beskeder.png}" height="auto" width="175" alt="Forside billede">
+      <img src="../static/Images/wishlist_cropped.png" th:src="@{Images/wishlist_cropped.png}" height="auto" width="175" alt="Forside billede">
 
-      </section4>
     </div>
   </div>
+  <div th:replace="~{Footer :: Footer}"></div>
 </main>
+</body>
