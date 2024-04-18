@@ -21,17 +21,18 @@ public class HomeController {
 
 
     @GetMapping("/loginside")
-    public String loginside () {
+    public String loginside() {
         return "loginside";
     }
 
-    @GetMapping ("/opretoenske")
-    public String opretoenske () {
+    @GetMapping("/opretoenske")
+    public String opretoenske() {
         return "opretoenske";
     }
+}
 
 
-    @GetMapping ("/ønskelisten")
+   /* @GetMapping ("/ønskelisten")
     public String Ønskelisten (@RequestParam ("wishListID") int wishListID, Model model) {
         List<Product> products = productRepository.loadWishList(wishListID);
         model.addAttribute("wishListID", wishListID);
@@ -45,4 +46,4 @@ public class HomeController {
         model.addAttribute("users", userList);
         return "usersss";
     }
-}
+}*/
