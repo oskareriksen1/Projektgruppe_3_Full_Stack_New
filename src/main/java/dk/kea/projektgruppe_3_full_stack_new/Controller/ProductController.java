@@ -38,6 +38,6 @@ public class ProductController {
 
         productService.addProduct(product);
 
-        return new ModelAndView("redirect:/oenskelisten");
+        return new ModelAndView("redirect:/oenskelisten?wishListID=" + wishListId);
     }
 }

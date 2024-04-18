@@ -28,7 +28,7 @@ public class HomeController {
     }
 
     @GetMapping("/opretoenske/{wishlistid}")
-    public String opretoenske(@PathVariable("wishlistid") int wishlistid, Model model)  {
+    public String opretoenske(@PathVariable("wishlistid") int wishlistid, Model model) {
         model.addAttribute("wishlistid", wishlistid);
         return "opretoenske";
     }
@@ -38,7 +38,7 @@ public class HomeController {
         return "Forside";
     }
 
-    @GetMapping ("/oenskelisten")
+    @GetMapping("/oenskelisten")
     public String Ønskelisten(@RequestParam(name = "wishListID", required = false) Integer wishListID, Model model) {
         if (wishListID == null) {
             // Håndtering af tilfælde, hvor wishListID ikke er til stede i anmodningen
@@ -49,12 +49,5 @@ public class HomeController {
         model.addAttribute("wishListID", wishListID);
         model.addAttribute("products", products);
         return "Ønskeliste";
-    }
-
-    @GetMapping("/brugere")
-    public String seBrugere(Model model) {
-        List<User> userList = userRepository.getAllUsers();
-        model.addAttribute("users", userList);
-        return "usersss";
     }
 }
