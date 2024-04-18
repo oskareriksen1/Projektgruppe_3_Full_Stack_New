@@ -331,6 +331,7 @@ footer {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    overflow-x: hidden;
 }
 .slider {
     height: 250px;
@@ -339,6 +340,7 @@ footer {
     width: 100%;
     display: grid;
     place-items: center;
+    overflow-x: hidden;
 }
 .slide-track {
     disaply: flex;
