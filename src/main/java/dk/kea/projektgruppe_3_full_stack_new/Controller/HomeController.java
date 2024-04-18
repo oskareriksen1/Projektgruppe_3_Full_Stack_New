@@ -17,8 +17,9 @@ import java.util.List;
 public class HomeController {
     @Autowired
     UserRepository userRepository;
-    ProductRepository productRepository;
 
+    @Autowired
+    ProductRepository productRepository;
 
     @GetMapping("/loginside")
     public String loginside() {
@@ -29,10 +30,9 @@ public class HomeController {
     public String opretoenske() {
         return "opretoenske";
     }
-}
 
 
-   /* @GetMapping ("/ønskelisten")
+    @GetMapping ("/oenskelisten")
     public String Ønskelisten (@RequestParam ("wishListID") int wishListID, Model model) {
         List<Product> products = productRepository.loadWishList(wishListID);
         model.addAttribute("wishListID", wishListID);
@@ -46,4 +46,4 @@ public class HomeController {
         model.addAttribute("users", userList);
         return "usersss";
     }
-}*/
+}

@@ -34,6 +34,6 @@ public class ProductController {
 
         productService.addProduct(product);
 
-        return new ModelAndView("redirect:/ønskelisten");
+        return new ModelAndView("redirect:/oenskelisten");
     }
 }

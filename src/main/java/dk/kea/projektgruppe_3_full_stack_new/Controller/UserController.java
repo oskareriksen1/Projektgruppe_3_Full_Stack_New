@@ -38,7 +38,7 @@ public class UserController {
     public String login(@RequestParam String username, @RequestParam String password) {
         int wishListID = DatabaseManager.authenticateUser(username, password);
         if (wishListID != -1) {
-        return "redirect:/ønskelisten?wishListID=" + wishListID;
+        return "redirect:/oenskelisten?wishListID=" + wishListID;
     } else {
         return "redirect:/loginside";
     }

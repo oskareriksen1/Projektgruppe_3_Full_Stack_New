@@ -47,7 +47,7 @@ public class ProductRepository {
     }
 
     public List<Product> loadWishList(int wishListID) {
-        String sql = "SELECT * FROM wish WHERE wishlist_id = ? ORDER BY id";
+        String sql = "SELECT * FROM products WHERE wishlist_id = ? ORDER BY id";
         return jdbcTemplate.query(sql, new Object[]{wishListID}, new ProductRowMapper());
     }
 
