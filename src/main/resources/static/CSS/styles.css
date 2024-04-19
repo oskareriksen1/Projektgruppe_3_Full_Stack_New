@@ -362,9 +362,11 @@ footer {
     overflow-x: hidden;
 }
 .slide-track {
-    disaply: flex;
+    display: flex;
     width: calc(250px * 48);
     animation: scroll 75s linear infinite;
+    animation-fill-mode: forwards;
+
 }
 .slide-track:hover {
     animation-play-state: paused;
@@ -373,8 +375,11 @@ footer {
     0% {
         transform: translateX(0);
     }
-    100% {
+    95% {
         transform: translateX(calc(-250px * 24));
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 .slide {
@@ -411,4 +416,3 @@ footer {
     top: 0;
     transform: rotateZ(180deg);
 }
-
